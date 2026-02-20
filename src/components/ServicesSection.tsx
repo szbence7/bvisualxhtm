@@ -1,5 +1,6 @@
 import { Video, Camera, Clapperboard, Settings } from "lucide-react";
 import { Card, CardBody } from "@heroui/react";
+import TiltedCard from "./ui/TiltedCard";
 
 const services = [
   {
@@ -45,14 +46,49 @@ const ServicesSection = () => {
         </div>
 
         {/* Service cards grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
-          {services.map(({ icon: Icon, label, description }, i) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 items-stretch">
+          {services.slice(0, 3).map(({ icon: Icon, label, description }, i) => (
+            <TiltedCard key={i} rotateAmplitude={15} scaleOnHover={1.05}>
+              <Card
+                isPressable
+                className="bg-[hsl(0_0%_9%)] border border-[hsl(0_0%_16%)] hover:border-[hsl(4_75%_42%_/_0.5)] transition-all duration-300 hover:shadow-[0_0_40px_hsl(4_75%_42%_/_0.3)] group rounded-xl overflow-hidden h-[240px] md:h-[260px] lg:h-[280px] xl:h-[300px]"
+              >
+                <CardBody className="flex flex-col items-center gap-5 p-8 text-center h-full">
+                  <div
+                    className="w-20 h-20 flex items-center justify-center transition-all duration-300 group-hover:scale-110 border border-[hsl(0_0%_30%)] rounded-xl"
+                  >
+                    <Icon
+                      size={32}
+                      strokeWidth={1.25}
+                      className="transition-colors duration-300 group-hover:text-[hsl(4_75%_42%)]"
+                      style={{ color: "hsl(0 0% 85%)" }}
+                    />
+                  </div>
+                  <div>
+                    <p
+                      className="text-base font-semibold tracking-wider uppercase text-white mb-2"
+                      style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "1rem" }}
+                    >
+                      {label}
+                    </p>
+                    <p
+                      className="text-sm leading-relaxed"
+                      style={{ color: "hsl(0 0% 55%)", fontFamily: "'Barlow', sans-serif" }}
+                    >
+                      {description}
+                    </p>
+                  </div>
+                </CardBody>
+              </Card>
+            </TiltedCard>
+          ))}
+          {services.slice(3).map(({ icon: Icon, label, description }, i) => (
             <Card
-              key={i}
+              key={i + 3}
               isPressable
-              className="bg-[hsl(0_0%_9%)] border border-[hsl(0_0%_16%)] hover:border-[hsl(4_75%_42%_/_0.5)] transition-all duration-300 hover:shadow-[0_0_40px_hsl(4_75%_42%_/_0.3)] group rounded-xl overflow-hidden"
+              className="bg-[hsl(0_0%_9%)] border border-[hsl(0_0%_16%)] hover:border-[hsl(4_75%_42%_/_0.5)] transition-all duration-300 hover:shadow-[0_0_40px_hsl(4_75%_42%_/_0.3)] group rounded-xl overflow-hidden h-[240px] md:h-[260px] lg:h-[280px] xl:h-[300px]"
             >
-              <CardBody className="flex flex-col items-center gap-5 p-8 text-center">
+              <CardBody className="flex flex-col items-center gap-5 p-8 text-center h-full">
                 <div
                   className="w-20 h-20 flex items-center justify-center transition-all duration-300 group-hover:scale-110 border border-[hsl(0_0%_30%)] rounded-xl"
                 >
