@@ -12,8 +12,8 @@ const Index = () => {
     <div className="min-h-screen" style={{ background: "hsl(0 0% 5%)" }}>
       <Navbar />
       <HeroSection />
-      <PortfolioGrid />
       <ServicesSection />
+      <PortfolioGrid />
       <PortfolioSection />
       <AboutSection />
       <ContactSection />
