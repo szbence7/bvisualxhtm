@@ -110,4 +110,41 @@
       animation: none !important;
     }
   }
+
+  /* Shiny Text animation - subtle metallic sheen */
+  .shiny-text {
+    position: relative;
+    background: linear-gradient(
+      120deg,
+      currentColor 0%,
+      currentColor 40%,
+      rgba(255, 255, 255, 0.95) 50%,
+      currentColor 60%,
+      currentColor 100%
+    );
+    background-size: 200% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-position: 100% 0;
+    animation: shine 3s linear infinite;
+  }
+
+  @keyframes shine {
+    0% {
+      background-position: 100% 0;
+    }
+    100% {
+      background-position: -100% 0;
+    }
+  }
+
+  /* Disable shiny text animation for reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    .shiny-text {
+      animation: none !important;
+      background: currentColor;
+      -webkit-text-fill-color: currentColor;
+    }
+  }
 }

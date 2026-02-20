@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import Aurora from "@/components/Aurora/Aurora";
 import { useEffect, useRef } from "react";
 import heroVideo from "@/assets/AdobeStock_1226869912.mov";
+import ShinyText from "@/components/ShinyText";
 
 const HeroSection = () => {
   // Toggle flag: set to false to revert to aurora background
@@ -98,7 +99,7 @@ const HeroSection = () => {
         >
           A vizuális
           <br />
-          <span style={{ color: "hsl(4 75% 55%)" }}>történetmesélés</span>
+          <ShinyText baseColor="hsl(4 75% 55%)">történetmesélés</ShinyText>
           <br />
           mesterfokon
         </h1>
