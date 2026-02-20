@@ -43,12 +43,12 @@ const PortfolioGrid = () => {
               className="text-5xl md:text-6xl font-black text-white uppercase leading-tight mb-4"
               style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
             >
-              Creative Visual
+              Kreatív vizuális
               <br />
-              Storytelling
+              történetmesélés
             </h2>
             <p className="text-base leading-relaxed" style={{ color: "hsl(0 0% 75%)", fontFamily: "'Barlow', sans-serif" }}>
-              We bring your vision to life with high-quality video production.
+              Átlépni a képernyő korlátain és olyan vizuális élményt nyújtani, ami megragad.
             </p>
           </div>
         </div>

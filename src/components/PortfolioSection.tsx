@@ -36,13 +36,13 @@ const PortfolioSection = () => {
             className="text-xs tracking-[0.4em] uppercase mb-4"
             style={{ color: "hsl(4 75% 55%)", fontFamily: "'Barlow', sans-serif" }}
           >
-            Our Work
+            Munkáink
           </p>
           <h2
             className="text-5xl md:text-7xl font-black uppercase text-white"
             style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
           >
-            Portfolio
+            Portfólió
           </h2>
         </div>
 

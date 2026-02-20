@@ -5,11 +5,11 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   const links = [
-    { label: "Home", href: "#home" },
-    { label: "Services", href: "#services" },
-    { label: "Portfolio", href: "#portfolio-work" },
-    { label: "About", href: "#about" },
-    { label: "Contact", href: "#contact" },
+    { label: "Kezdőlap", href: "#home" },
+    { label: "Szolgáltatások", href: "#services" },
+    { label: "Portfólió", href: "#portfolio-work" },
+    { label: "Rólunk", href: "#about" },
+    { label: "Kapcsolat", href: "#contact" },
   ];
 
   return (

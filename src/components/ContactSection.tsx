@@ -19,20 +19,27 @@ const ContactSection = () => {
           className="text-xs tracking-[0.4em] uppercase mb-4"
           style={{ color: "hsl(4 75% 55%)", fontFamily: "'Barlow', sans-serif" }}
         >
-          Let's Work Together
+          Víziónk
         </p>
         <h2
           className="text-5xl md:text-7xl font-black uppercase text-white mb-12"
           style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
         >
-          Get in Touch
+          Dolgozzunk együtt!
         </h2>
+
+        <p
+          className="text-base md:text-lg leading-relaxed mb-12 max-w-3xl mx-auto"
+          style={{ color: "hsl(0 0% 65%)", fontFamily: "'Barlow', sans-serif" }}
+        >
+          A víziónk egyszerű: Átlépni a képernyő korlátain és olyan vizuális élményt nyújtani, ami megragad és nem ereszt.
+        </p>
 
         <div className="flex flex-col gap-4">
           <input
             type="text"
             name="name"
-            placeholder="Your Name"
+            placeholder="Neved"
             value={form.name}
             onChange={handleChange}
             className="w-full px-5 py-4 text-sm outline-none transition-all duration-200 focus:ring-1"
@@ -50,7 +57,7 @@ const ContactSection = () => {
           <input
             type="email"
             name="email"
-            placeholder="Your Email"
+            placeholder="Email címed"
             value={form.email}
             onChange={handleChange}
             className="w-full px-5 py-4 text-sm outline-none transition-all duration-200"
@@ -67,7 +74,7 @@ const ContactSection = () => {
           />
           <textarea
             name="message"
-            placeholder="Tell us about your project..."
+            placeholder="Mesélj a projektedről..."
             rows={5}
             value={form.message}
             onChange={handleChange}
@@ -92,7 +99,7 @@ const ContactSection = () => {
             }}
           >
             <Send size={16} />
-            Send Message
+            Üzenet küldése
           </button>
         </div>
       </div>

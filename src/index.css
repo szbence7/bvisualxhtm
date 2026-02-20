@@ -103,4 +103,11 @@
     border-color: hsl(var(--primary) / 0.5);
     box-shadow: var(--shadow-red);
   }
+
+  /* Hero video background - respect reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    .hero-video {
+      animation: none !important;
+    }
+  }
 }

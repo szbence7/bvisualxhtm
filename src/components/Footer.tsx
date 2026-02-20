@@ -6,14 +6,28 @@ const Footer = () => (
       borderTop: "1px solid hsl(0 0% 12%)",
     }}
   >
-    <p
-      className="text-xs tracking-widest uppercase"
-      style={{ color: "hsl(0 0% 40%)", fontFamily: "'Barlow', sans-serif" }}
-    >
-      © 2025 B Visual × HTM. All rights reserved.
-    </p>
+    <div className="flex flex-col gap-2">
+      <p
+        className="text-xs tracking-wider"
+        style={{ color: "hsl(0 0% 60%)", fontFamily: "'Barlow', sans-serif" }}
+      >
+        <span style={{ color: "hsl(4 75% 55%)" }}>bvisual × htm</span> | Visual Architects
+      </p>
+      <p
+        className="text-xs tracking-wide"
+        style={{ color: "hsl(0 0% 50%)", fontFamily: "'Barlow', sans-serif" }}
+      >
+        📸🎥 Cinematic storytelling & Tech
+      </p>
+      <p
+        className="text-xs tracking-widest uppercase"
+        style={{ color: "hsl(0 0% 40%)", fontFamily: "'Barlow', sans-serif" }}
+      >
+        © 2025 B Visual × HTM. Minden jog fenntartva.
+      </p>
+    </div>
     <div className="flex gap-6">
-      {["Instagram", "YouTube", "Twitter"].map((s) => (
+      {["Instagram", "YouTube", "TikTok"].map((s) => (
         <a
           key={s}
           href="#"

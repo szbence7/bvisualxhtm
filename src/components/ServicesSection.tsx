@@ -1,26 +1,26 @@
-import { Film, Mic, Video, Megaphone } from "lucide-react";
+import { Video, Camera, Clapperboard, Settings } from "lucide-react";
 import { Card, CardBody } from "@heroui/react";
 
 const services = [
   {
-    icon: Film,
-    label: "Music Videos",
-    description: "Cinematic productions that amplify your sound and artistic vision.",
-  },
-  {
-    icon: Mic,
-    label: "Podcasts",
-    description: "Professional studio-quality podcast recording and production.",
-  },
-  {
     icon: Video,
-    label: "Short Films",
-    description: "Narrative storytelling crafted with precision and creativity.",
+    label: "Cinematic videózás",
+    description: "A reklámfilmektől a dinamikus rövid formátumú tartalmakig.",
   },
   {
-    icon: Megaphone,
-    label: "Commercials",
-    description: "Impactful commercial content that drives engagement.",
+    icon: Camera,
+    label: "Profi fotográfia",
+    description: "Mert tudjuk, hogyan mondjunk el egy történetet egyetlen képkockával.",
+  },
+  {
+    icon: Clapperboard,
+    label: "Post-production",
+    description: "Vágás, sound design és az a bizonyos \"visual\" plusz, amitől egy videó életre kel.",
+  },
+  {
+    icon: Settings,
+    label: "Tech & Gear",
+    description: "Megosztjuk tapasztalatainkat az eszközeinkről, hogy ti is a legjobbat hozhassátok ki magatokból.",
   },
 ];
 
@@ -28,6 +28,22 @@ const ServicesSection = () => {
   return (
     <section id="services" style={{ background: "hsl(0 0% 6%)" }}>
       <div className="container mx-auto px-6 py-16 max-w-7xl">
+        {/* Section header */}
+        <div className="mb-12">
+          <p
+            className="text-xs tracking-[0.4em] uppercase mb-4"
+            style={{ color: "hsl(4 75% 55%)", fontFamily: "'Barlow', sans-serif" }}
+          >
+            Szolgáltatások
+          </p>
+          <h2
+            className="text-5xl md:text-7xl font-black uppercase text-white"
+            style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
+          >
+            Amivel foglalkozunk
+          </h2>
+        </div>
+
         {/* Service cards grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
           {services.map(({ icon: Icon, label, description }, i) => (

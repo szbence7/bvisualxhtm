@@ -1,10 +1,10 @@
 import aboutTeam from "@/assets/about-team.jpg";
 
 const stats = [
-  { value: "150+", label: "Projects Completed" },
-  { value: "8+", label: "Years Experience" },
-  { value: "50+", label: "Happy Clients" },
-  { value: "12", label: "Industry Awards" },
+  { value: "150+", label: "Elkészült projekt" },
+  { value: "8+", label: "Év tapasztalat" },
+  { value: "50+", label: "Elégedett ügyfél" },
+  { value: "12", label: "Szakmai díj" },
 ];
 
 const AboutSection = () => {
@@ -20,7 +20,7 @@ const AboutSection = () => {
           className="text-xs tracking-[0.4em] uppercase mb-4"
           style={{ color: "hsl(4 75% 55%)", fontFamily: "'Barlow', sans-serif" }}
         >
-          Who We Are
+          Rólunk
         </p>
 
         {/* Two-column layout */}
@@ -31,26 +31,23 @@ const AboutSection = () => {
               className="text-5xl md:text-7xl font-black uppercase text-white leading-none mb-8"
               style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
             >
-              About
+              bvisual
               <br />
-              <span style={{ color: "hsl(4 75% 55%)" }}>B Visual</span>
+              <span style={{ color: "hsl(4 75% 55%)" }}>×</span>
               <br />
-              × HTM
+              HTM
             </h2>
             <p
               className="text-base leading-relaxed mb-6"
               style={{ color: "hsl(0 0% 65%)", fontFamily: "'Barlow', sans-serif" }}
             >
-              We are a creative video production studio passionate about telling stories that resonate. 
-              Founded by filmmakers and visual artists, B Visual × HTM has grown into a full-service 
-              production house trusted by artists, brands, and creators worldwide.
+              Profi videósokból és fotósokból álló csapatként abban hiszünk, hogy minden pillanat megérdemli a tökéletes kompozíciót. Legyen szó cinematic videógyártásról, precíz utómunkáról, fényelésről vagy technikai setupokról – mi azért vagyunk itt, hogy szintet lépjünk a tartalomgyártásban.
             </p>
             <p
               className="text-base leading-relaxed mb-10"
               style={{ color: "hsl(0 0% 55%)", fontFamily: "'Barlow', sans-serif" }}
             >
-              From concept to final cut, we handle every stage of production — bringing your vision to life 
-              with cinematic precision, bold aesthetics, and uncompromising quality.
+              A technikai tudás és a tiszta látvány találkozása minden projektünkben.
             </p>
 
             {/* Red divider */}
@@ -61,7 +58,7 @@ const AboutSection = () => {
 
             {/* Values */}
             <div className="flex flex-col gap-4">
-              {["Cinematic quality in every frame", "Collaborative creative process", "On time, on budget, always"].map((v, i) => (
+              {["Cinematic storytelling", "Technikai precizitás", "Kreatív szabadság minden pillanatban"].map((v, i) => (
                 <div key={i} className="flex items-center gap-4">
                   <div
                     className="w-1.5 h-1.5 flex-shrink-0"
