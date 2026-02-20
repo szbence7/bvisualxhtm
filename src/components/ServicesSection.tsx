@@ -50,11 +50,11 @@ const ServicesSection = () => {
             <Card
               key={i}
               isPressable
-              className="bg-[hsl(0_0%_9%)] border border-[hsl(0_0%_16%)] hover:border-[hsl(4_75%_42%_/_0.5)] transition-all duration-300 hover:shadow-[0_0_40px_hsl(4_75%_42%_/_0.3)] group"
+              className="bg-[hsl(0_0%_9%)] border border-[hsl(0_0%_16%)] hover:border-[hsl(4_75%_42%_/_0.5)] transition-all duration-300 hover:shadow-[0_0_40px_hsl(4_75%_42%_/_0.3)] group rounded-xl overflow-hidden"
             >
               <CardBody className="flex flex-col items-center gap-5 p-8 text-center">
                 <div
-                  className="w-20 h-20 flex items-center justify-center transition-all duration-300 group-hover:scale-110 border border-[hsl(0_0%_30%)] rounded-sm"
+                  className="w-20 h-20 flex items-center justify-center transition-all duration-300 group-hover:scale-110 border border-[hsl(0_0%_30%)] rounded-xl"
                 >
                   <Icon
                     size={32}

@@ -52,10 +52,9 @@ const PortfolioSection = () => {
             <button
               key={cat}
               onClick={() => setActive(cat)}
-              className="px-5 py-2 text-xs font-semibold tracking-[0.15em] uppercase transition-all duration-200"
+              className="px-5 py-2 text-xs font-semibold tracking-[0.15em] uppercase transition-all duration-200 rounded-lg"
               style={{
                 fontFamily: "'Barlow', sans-serif",
-                borderRadius: "2px",
                 background: active === cat ? "hsl(4 75% 42%)" : "hsl(0 0% 10%)",
                 color: active === cat ? "hsl(0 0% 100%)" : "hsl(0 0% 60%)",
                 border: `1px solid ${active === cat ? "hsl(4 75% 42%)" : "hsl(0 0% 18%)"}`,
@@ -71,7 +70,7 @@ const PortfolioSection = () => {
           {filtered.map((project, i) => (
             <div
               key={`${project.title}-${i}`}
-              className="relative overflow-hidden group cursor-pointer"
+              className="relative overflow-hidden group cursor-pointer rounded-2xl"
               style={{ aspectRatio: "4/3" }}
             >
               <img

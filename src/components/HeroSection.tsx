@@ -111,7 +111,7 @@ const HeroSection = () => {
 
         <a href="#contact">
           <button
-            className="px-10 py-4 text-sm font-bold tracking-[0.2em] uppercase text-white transition-all duration-300 hover:brightness-110 active:scale-95"
+            className="px-10 py-4 text-sm font-bold tracking-[0.2em] uppercase text-white transition-all duration-300 hover:brightness-110 active:scale-95 rounded-lg"
             style={{
               background: "hsl(4 75% 42%)",
               fontFamily: "'Barlow', sans-serif",

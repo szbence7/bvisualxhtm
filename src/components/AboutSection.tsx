@@ -78,13 +78,13 @@ const AboutSection = () => {
           {/* Right — image */}
           <div className="relative">
             <div
-              className="absolute -top-4 -left-4 w-full h-full"
+              className="absolute -top-4 -left-4 w-full h-full rounded-2xl"
               style={{ border: "1px solid hsl(4 75% 42% / 0.3)" }}
             />
             <img
               src={aboutTeam}
               alt="B Visual HTM production team"
-              className="relative w-full h-full object-cover"
+              className="relative w-full h-full object-cover rounded-2xl overflow-hidden"
               style={{ maxHeight: "500px" }}
             />
             {/* Red accent corner */}
@@ -97,7 +97,7 @@ const AboutSection = () => {
 
         {/* Stats row */}
         <div
-          className="grid grid-cols-2 md:grid-cols-4 gap-px"
+          className="grid grid-cols-2 md:grid-cols-4 gap-px rounded-xl overflow-hidden"
           style={{ border: "1px solid hsl(0 0% 14%)" }}
         >
           {stats.map(({ value, label }, i) => (

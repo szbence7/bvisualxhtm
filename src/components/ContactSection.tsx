@@ -42,14 +42,13 @@ const ContactSection = () => {
             placeholder="Neved"
             value={form.name}
             onChange={handleChange}
-            className="w-full px-5 py-4 text-sm outline-none transition-all duration-200 focus:ring-1"
+            className="w-full px-5 py-4 text-sm outline-none transition-all duration-200 focus:ring-1 rounded"
             style={{
               background: "hsl(0 0% 9%)",
               border: "1px solid hsl(0 0% 18%)",
               color: "hsl(0 0% 90%)",
               fontFamily: "'Barlow', sans-serif",
               letterSpacing: "0.05em",
-              borderRadius: "2px",
             }}
             onFocus={(e) => (e.target.style.borderColor = "hsl(4 75% 42%)")}
             onBlur={(e) => (e.target.style.borderColor = "hsl(0 0% 18%)")}
@@ -60,14 +59,13 @@ const ContactSection = () => {
             placeholder="Email címed"
             value={form.email}
             onChange={handleChange}
-            className="w-full px-5 py-4 text-sm outline-none transition-all duration-200"
+            className="w-full px-5 py-4 text-sm outline-none transition-all duration-200 rounded"
             style={{
               background: "hsl(0 0% 9%)",
               border: "1px solid hsl(0 0% 18%)",
               color: "hsl(0 0% 90%)",
               fontFamily: "'Barlow', sans-serif",
               letterSpacing: "0.05em",
-              borderRadius: "2px",
             }}
             onFocus={(e) => (e.target.style.borderColor = "hsl(4 75% 42%)")}
             onBlur={(e) => (e.target.style.borderColor = "hsl(0 0% 18%)")}
@@ -78,24 +76,22 @@ const ContactSection = () => {
             rows={5}
             value={form.message}
             onChange={handleChange}
-            className="w-full px-5 py-4 text-sm outline-none resize-none transition-all duration-200"
+            className="w-full px-5 py-4 text-sm outline-none resize-none transition-all duration-200 rounded"
             style={{
               background: "hsl(0 0% 9%)",
               border: "1px solid hsl(0 0% 18%)",
               color: "hsl(0 0% 90%)",
               fontFamily: "'Barlow', sans-serif",
               letterSpacing: "0.05em",
-              borderRadius: "2px",
             }}
             onFocus={(e) => (e.target.style.borderColor = "hsl(4 75% 42%)")}
             onBlur={(e) => (e.target.style.borderColor = "hsl(0 0% 18%)")}
           />
           <button
-            className="flex items-center justify-center gap-3 px-10 py-4 text-sm font-bold tracking-[0.2em] uppercase text-white transition-all duration-300 hover:brightness-110 active:scale-95 mt-2"
+            className="flex items-center justify-center gap-3 px-10 py-4 text-sm font-bold tracking-[0.2em] uppercase text-white transition-all duration-300 hover:brightness-110 active:scale-95 mt-2 rounded-lg"
             style={{
               background: "hsl(4 75% 42%)",
               fontFamily: "'Barlow', sans-serif",
-              borderRadius: "2px",
             }}
           >
             <Send size={16} />
