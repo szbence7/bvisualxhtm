@@ -41,7 +41,7 @@ const Navbar = () => {
           <img src="/src/assets/navlogo.png" alt="B VISUAL × HTM Logo" className="w-full h-full object-contain" />
         </div>
         <div>
-          <p className="text-white font-bold text-sm tracking-wider leading-tight" style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>B VISUAL × HTM</p>
+          <p className="text-white font-bold text-sm tracking-wider leading-tight" style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>B VISUAL <span style={{ color: "hsl(4 75% 55%)" }}>×</span> HTM</p>
         </div>
       </div>
 

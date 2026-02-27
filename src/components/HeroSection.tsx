@@ -3,7 +3,7 @@ import Aurora from "@/components/Aurora/Aurora";
 import heroVideo from "@/assets/AdobeStock_1226869912.mov";
 import ShinyText from "@/components/ShinyText";
 import ScrollFloat from "@/components/reactbits/ScrollFloat";
-import logoImage from "@/assets/logo.png";
+import logoImage from "@/assets/navlogo.png";
 
 const HeroSection = () => {
   const useVideoHeroBg = true;
@@ -166,15 +166,23 @@ const HeroSection = () => {
             }}
           >
             <ScrollFloat>
-              <img
-                src={logoImage}
-                alt="B Visual × HTM Logo"
-                style={{
-                  width: 'clamp(360px, 55vw, 820px)',
-                  height: 'auto',
-                  display: 'block'
-                }}
-              />
+              <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '3.5rem' }}>
+                <img
+                  src={logoImage}
+                  alt="B Visual × HTM Logo"
+                  style={{
+                    width: 'clamp(220px, 32vw, 480px)',
+                    height: 'auto',
+                    display: 'block'
+                  }}
+                />
+                <h2
+                  className="text-5xl md:text-7xl font-black uppercase text-white leading-none"
+                  style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
+                >
+                  bvisual <span style={{ color: "hsl(4 75% 55%)" }}>×</span> HTM
+                </h2>
+              </div>
             </ScrollFloat>
           </div>
 
