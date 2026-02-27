@@ -75,7 +75,7 @@ const HeroSection = () => {
       ref={wrapperRef}
       style={{
         position: 'relative',
-        height: prefersReducedMotion ? '100vh' : '250vh',
+        height: prefersReducedMotion ? '100vh' : '320vh',
         width: '100%',
         overflow: 'visible'
       }}
