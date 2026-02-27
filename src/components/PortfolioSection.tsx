@@ -1,29 +1,78 @@
 import { useState } from "react";
-import heroMusic from "@/assets/hero-music.jpg";
-import heroCamera from "@/assets/hero-camera.jpg";
-import heroPodcast from "@/assets/hero-podcast.jpg";
-import heroStorytelling from "@/assets/hero-storytelling.jpg";
-import portfolioShortfilm from "@/assets/portfolio-shortfilm.jpg";
-import portfolioCommercial from "@/assets/portfolio-commercial.jpg";
-import portfolioMusicvideo2 from "@/assets/portfolio-musicvideo2.jpg";
-import portfolioPodcast2 from "@/assets/portfolio-podcast2.jpg";
 import { Play } from "lucide-react";
+import { Dialog, DialogContent } from "@/components/ui/dialog";
 
-const categories = ["All", "Music Videos", "Podcasts", "Short Films", "Commercials"];
+const categories = ["All", "Podcast", "Magazin műsor", "Cégbemutató", "Egyéb"];
 
 const projects = [
-  { title: "Neon Nights", category: "Music Videos", img: heroMusic, year: "2024" },
-  { title: "Red Light Sessions", category: "Music Videos", img: portfolioMusicvideo2, year: "2024" },
-  { title: "The Interview", category: "Podcasts", img: heroPodcast, year: "2023" },
-  { title: "Deep Conversations", category: "Podcasts", img: portfolioPodcast2, year: "2024" },
-  { title: "After Dark", category: "Short Films", img: portfolioShortfilm, year: "2023" },
-  { title: "Between Frames", category: "Short Films", img: heroStorytelling, year: "2024" },
-  { title: "Behind the Lens", category: "Short Films", img: heroCamera, year: "2023" },
-  { title: "Drive Forward", category: "Commercials", img: portfolioCommercial, year: "2024" },
+  { 
+    title: "Podcast 1", 
+    category: "Podcast", 
+    youtubeId: "XA_eayulQ5Y",
+    thumbnailUrl: "https://img.youtube.com/vi/XA_eayulQ5Y/hqdefault.jpg",
+    year: "2024" 
+  },
+  { 
+    title: "Podcast 2", 
+    category: "Podcast", 
+    youtubeId: "hQe3OEn_ggk",
+    thumbnailUrl: "https://img.youtube.com/vi/hQe3OEn_ggk/hqdefault.jpg",
+    year: "2024" 
+  },
+  { 
+    title: "Magazin műsor 1", 
+    category: "Magazin műsor", 
+    youtubeId: "aCZH0ZmEs-4",
+    thumbnailUrl: "https://img.youtube.com/vi/aCZH0ZmEs-4/hqdefault.jpg",
+    year: "2024" 
+  },
+  { 
+    title: "Magazin műsor 2", 
+    category: "Magazin műsor", 
+    youtubeId: "mHQLBMlmrJY",
+    thumbnailUrl: "https://img.youtube.com/vi/mHQLBMlmrJY/hqdefault.jpg",
+    year: "2024" 
+  },
+  { 
+    title: "Magazin műsor 3", 
+    category: "Magazin műsor", 
+    youtubeId: "H7CWSmaSO4E",
+    thumbnailUrl: "https://img.youtube.com/vi/H7CWSmaSO4E/hqdefault.jpg",
+    year: "2024" 
+  },
+  { 
+    title: "Cégbemutató 1", 
+    category: "Cégbemutató", 
+    youtubeId: "zEGOdBUNEwE",
+    thumbnailUrl: "https://img.youtube.com/vi/zEGOdBUNEwE/hqdefault.jpg",
+    year: "2024" 
+  },
+  { 
+    title: "Cégbemutató 2", 
+    category: "Cégbemutató", 
+    youtubeId: "FjRzF9btZP8",
+    thumbnailUrl: "https://img.youtube.com/vi/FjRzF9btZP8/hqdefault.jpg",
+    year: "2024" 
+  },
+  { 
+    title: "Cégbemutató 3", 
+    category: "Cégbemutató", 
+    youtubeId: "OcouXI1sW1g",
+    thumbnailUrl: "https://img.youtube.com/vi/OcouXI1sW1g/hqdefault.jpg",
+    year: "2024" 
+  },
+  { 
+    title: "Egyéb", 
+    category: "Egyéb", 
+    youtubeId: "6UGemqIXHYY",
+    thumbnailUrl: "https://img.youtube.com/vi/6UGemqIXHYY/hqdefault.jpg",
+    year: "2024" 
+  },
 ];
 
 const PortfolioSection = () => {
   const [active, setActive] = useState("All");
+  const [selectedProject, setSelectedProject] = useState<typeof projects[0] | null>(null);
 
   const filtered = active === "All" ? projects : projects.filter((p) => p.category === active);
 
@@ -72,10 +121,11 @@ const PortfolioSection = () => {
               key={`${project.title}-${i}`}
               className="relative overflow-hidden group cursor-pointer rounded-2xl"
               style={{ aspectRatio: "4/3" }}
+              onClick={() => setSelectedProject(project)}
             >
               <img
-                src={project.img}
-                alt={project.title}
+                src={project.thumbnailUrl}
+                alt={`${project.title} YouTube thumbnail`}
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
               {/* Overlay */}
@@ -140,6 +190,23 @@ const PortfolioSection = () => {
             </div>
           ))}
         </div>
+
+        {/* Video Modal */}
+        <Dialog open={!!selectedProject} onOpenChange={(open) => !open && setSelectedProject(null)}>
+          <DialogContent className="max-w-5xl p-0 bg-black border-none overflow-hidden">
+            {selectedProject && (
+              <div className="relative w-full" style={{ paddingTop: '56.25%' }}>
+                <iframe
+                  className="absolute inset-0 w-full h-full"
+                  src={`https://www.youtube.com/embed/${selectedProject.youtubeId}?autoplay=1&rel=0`}
+                  title={selectedProject.title}
+                  allow="autoplay; encrypted-media; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
+            )}
+          </DialogContent>
+        </Dialog>
       </div>
     </section>
   );
