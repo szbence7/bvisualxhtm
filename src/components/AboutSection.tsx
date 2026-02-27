@@ -31,11 +31,7 @@ const AboutSection = () => {
               className="text-5xl md:text-7xl font-black uppercase text-white leading-none mb-8"
               style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
             >
-              bvisual
-              <br />
-              <span style={{ color: "hsl(4 75% 55%)" }}>×</span>
-              <br />
-              HTM
+              bvisual <span style={{ color: "hsl(4 75% 55%)" }}>×</span> HTM
             </h2>
             <p
               className="text-base leading-relaxed mb-6"

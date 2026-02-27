@@ -38,23 +38,10 @@ const Navbar = () => {
       <div className="relative z-10 flex items-center gap-3">
         {/* Logo */}
         <div className="relative w-12 h-12">
-          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
-            <circle cx="24" cy="24" r="20" stroke="white" strokeWidth="1.5" opacity="0.9"/>
-            <circle cx="24" cy="24" r="8" stroke="white" strokeWidth="1.5" opacity="0.9"/>
-            <line x1="24" y1="4" x2="24" y2="16" stroke="white" strokeWidth="1.5"/>
-            <line x1="24" y1="32" x2="24" y2="44" stroke="white" strokeWidth="1.5"/>
-            <line x1="4" y1="24" x2="16" y2="24" stroke="white" strokeWidth="1.5"/>
-            <line x1="32" y1="24" x2="44" y2="24" stroke="white" strokeWidth="1.5"/>
-            <line x1="8.7" y1="8.7" x2="16.97" y2="16.97" stroke="white" strokeWidth="1.5"/>
-            <line x1="31.03" y1="31.03" x2="39.3" y2="39.3" stroke="white" strokeWidth="1.5"/>
-            <line x1="39.3" y1="8.7" x2="31.03" y2="16.97" stroke="white" strokeWidth="1.5"/>
-            <line x1="16.97" y1="31.03" x2="8.7" y2="39.3" stroke="white" strokeWidth="1.5"/>
-            <circle cx="30" cy="18" r="2" fill="hsl(4 75% 55%)" />
-          </svg>
+          <img src="/src/assets/navlogo.png" alt="B VISUAL × HTM Logo" className="w-full h-full object-contain" />
         </div>
         <div>
-          <p className="text-white font-bold text-sm tracking-wider leading-tight" style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>B VISUAL</p>
-          <p className="text-white text-sm tracking-wider leading-tight opacity-80" style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>× HTM</p>
+          <p className="text-white font-bold text-sm tracking-wider leading-tight" style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>B VISUAL × HTM</p>
         </div>
       </div>
 
