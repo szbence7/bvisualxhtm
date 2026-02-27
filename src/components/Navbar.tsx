@@ -17,7 +17,9 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY >= 100);
+      // Hero section is 320vh, so trigger background after scrolling past it
+      const heroHeight = window.innerHeight * 3.2;
+      setScrolled(window.scrollY >= heroHeight);
     };
 
     window.addEventListener("scroll", handleScroll);
