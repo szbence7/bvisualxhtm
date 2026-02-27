@@ -4,7 +4,7 @@ const stats = [
   { value: "150+", label: "Elkészült projekt" },
   { value: "8+", label: "Év tapasztalat" },
   { value: "50+", label: "Elégedett ügyfél" },
-  { value: "12", label: "Szakmai díj" },
+  { value: "15+", label: "Aktív partnerség" },
 ];
 
 const AboutSection = () => {
