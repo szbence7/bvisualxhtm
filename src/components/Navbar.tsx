@@ -1,8 +1,11 @@
-import { useState } from "react";
+"use client";
+
+import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   const links = [
     { label: "Kezdőlap", href: "#home" },
@@ -12,11 +15,28 @@ const Navbar = () => {
     { label: "Kapcsolat", href: "#contact" },
   ];
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY >= 100);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 py-5"
-      style={{ background: "linear-gradient(180deg, hsl(0 0% 0% / 0.85) 0%, transparent 100%)" }}>
-      {/* Logo */}
-      <div className="flex items-center gap-3">
+    <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 py-5">
+      {/* Background Layer */}
+      <div 
+        className={`absolute inset-0 pointer-events-none transition-opacity duration-500 ease-out ${
+          scrolled ? "opacity-100" : "opacity-0"
+        }`}
+        style={{ background: "linear-gradient(180deg, hsl(0 0% 0% / 0.85) 0%, transparent 100%)" }}
+      />
+      
+      {/* Content Layer */}
+      <div className="relative z-10 flex items-center gap-3">
+        {/* Logo */}
         <div className="relative w-12 h-12">
           <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
             <circle cx="24" cy="24" r="20" stroke="white" strokeWidth="1.5" opacity="0.9"/>
@@ -39,7 +59,7 @@ const Navbar = () => {
       </div>
 
       {/* Desktop Nav */}
-      <ul className="hidden md:flex items-center gap-10">
+      <ul className="hidden md:flex items-center gap-10 relative z-10">
         {links.map((link) => (
           <li key={link.label}>
             <a href={link.href} className="nav-link text-sm tracking-widest font-medium uppercase"
@@ -51,7 +71,7 @@ const Navbar = () => {
       </ul>
 
       {/* Mobile toggle */}
-      <button className="md:hidden text-white" onClick={() => setOpen(!open)}>
+      <button className="md:hidden text-white relative z-10" onClick={() => setOpen(!open)}>
         {open ? <X size={24} /> : <Menu size={24} />}
       </button>
 
