@@ -3,9 +3,36 @@ import { Send } from "lucide-react";
 
 const ContactSection = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
+  const [result, setResult] = useState("");
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setResult("Küldés...");
+
+    const formData = new FormData(e.currentTarget);
+    formData.append("access_key", "2b73fba2-3296-4aec-a449-e5baf1cf21c6");
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setResult("Sikeres! Hamarosan jelentkezünk.");
+        setForm({ name: "", email: "", message: "" });
+      } else {
+        setResult("Hiba történt. Kérlek próbáld újra!");
+      }
+    } catch (error) {
+      setResult("Hiba történt. Kérlek próbáld újra!");
+    }
   };
 
   return (
@@ -35,13 +62,14 @@ const ContactSection = () => {
           A víziónk egyszerű: Átlépni a képernyő korlátain és olyan vizuális élményt nyújtani, ami megragad és nem ereszt.
         </p>
 
-        <div className="flex flex-col gap-4">
+        <form onSubmit={handleSubmit} className="flex flex-col gap-4">
           <input
             type="text"
             name="name"
             placeholder="Neved"
             value={form.name}
             onChange={handleChange}
+            required
             className="w-full px-5 py-4 text-sm outline-none transition-all duration-200 focus:ring-1 rounded"
             style={{
               background: "hsl(0 0% 9%)",
@@ -59,6 +87,7 @@ const ContactSection = () => {
             placeholder="Email címed"
             value={form.email}
             onChange={handleChange}
+            required
             className="w-full px-5 py-4 text-sm outline-none transition-all duration-200 rounded"
             style={{
               background: "hsl(0 0% 9%)",
@@ -76,6 +105,7 @@ const ContactSection = () => {
             rows={5}
             value={form.message}
             onChange={handleChange}
+            required
             className="w-full px-5 py-4 text-sm outline-none resize-none transition-all duration-200 rounded"
             style={{
               background: "hsl(0 0% 9%)",
@@ -88,6 +118,7 @@ const ContactSection = () => {
             onBlur={(e) => (e.target.style.borderColor = "hsl(0 0% 18%)")}
           />
           <button
+            type="submit"
             className="flex items-center justify-center gap-3 px-10 py-4 text-sm font-bold tracking-[0.2em] uppercase text-white transition-all duration-300 hover:brightness-110 active:scale-95 mt-2 rounded-lg"
             style={{
               background: "hsl(4 75% 42%)",
@@ -97,7 +128,18 @@ const ContactSection = () => {
             <Send size={16} />
             Üzenet küldése
           </button>
-        </div>
+          {result && (
+            <p
+              className="text-center text-sm mt-2"
+              style={{
+                color: result.includes("Sikeres") ? "hsl(120 75% 55%)" : "hsl(0 0% 65%)",
+                fontFamily: "'Barlow', sans-serif",
+              }}
+            >
+              {result}
+            </p>
+          )}
+        </form>
       </div>
     </section>
   );
