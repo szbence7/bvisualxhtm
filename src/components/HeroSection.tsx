@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import Aurora from "@/components/Aurora/Aurora";
-import heroVideo from "@/assets/AdobeStock_1226869912.mov";
+import heroVideo from "@/assets/AdobeStock_1226869912.webm";
 import ShinyText from "@/components/ShinyText";
 import ScrollFloat from "@/components/reactbits/ScrollFloat";
 import logoImage from "@/assets/navlogo.png";
@@ -117,7 +117,7 @@ const HeroSection = () => {
                 zIndex: 0
               }}
             >
-              <source src={heroVideo} type="video/mp4" />
+              <source src={heroVideo} type="video/webm" />
             </video>
 
             <div 
