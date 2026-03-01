@@ -28,18 +28,42 @@ const Footer = () => (
         © 2025 B Visual × HTM. Minden jog fenntartva.
       </p>
     </div>
+    <div className="flex-1 flex justify-center">
+      <p
+        className="text-xs tracking-wide"
+        style={{ color: "hsl(0 0% 50%)", fontFamily: "'Barlow', sans-serif" }}
+      >
+        Made by{" "}
+        <a
+          href="https://bencecodes.hu/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="transition-colors duration-200"
+          style={{ color: "hsl(4 75% 55%)" }}
+          onMouseEnter={(e) => ((e.target as HTMLElement).style.textDecoration = "underline")}
+          onMouseLeave={(e) => ((e.target as HTMLElement).style.textDecoration = "none")}
+        >
+          benceCodes;
+        </a>
+      </p>
+    </div>
     <div className="flex flex-col gap-4 items-end">
       <div className="flex gap-6">
-        {["Instagram", "YouTube", "TikTok"].map((s) => (
+        {[
+          { label: "Instagram", href: "https://www.instagram.com/b_visual_" },
+          { label: "YouTube", href: "#" },
+          { label: "TikTok", href: "#" },
+        ].map(({ label, href }) => (
           <a
-            key={s}
-            href="#"
+            key={label}
+            href={href}
+            {...(href !== "#" && { target: "_blank", rel: "noopener noreferrer" })}
             className="text-xs tracking-widest uppercase transition-colors duration-200"
             style={{ color: "hsl(0 0% 40%)", fontFamily: "'Barlow', sans-serif" }}
             onMouseEnter={(e) => ((e.target as HTMLElement).style.color = "hsl(4 75% 55%)")}
             onMouseLeave={(e) => ((e.target as HTMLElement).style.color = "hsl(0 0% 40%)")}
           >
-            {s}
+            {label}
           </a>
         ))}
       </div>
