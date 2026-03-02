@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { useLocation, useNavigate } from "react-router-dom";
+import logoImage from "@/assets/navlogo.png";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -82,7 +83,7 @@ const Navbar = () => {
             window.scrollTo({ top: 0, behavior: "smooth" });
           }
         }}>
-          <img src="/src/assets/navlogo.png" alt="B VISUAL × HTM Logo" className="w-full h-full object-contain" />
+          <img src={logoImage} alt="B VISUAL × HTM Logo" className="w-full h-full object-contain" />
         </div>
         <div>
           <p className="text-white font-bold text-sm tracking-wider leading-tight" style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>B VISUAL <span style={{ color: "hsl(4 75% 55%)" }}>×</span> HTM</p>
