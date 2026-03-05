@@ -43,8 +43,8 @@ const projects = [
   { 
     title: "Cégbemutató 1", 
     category: "Cégbemutató", 
-    youtubeId: "zEGOdBUNEwE",
-    thumbnailUrl: "https://img.youtube.com/vi/zEGOdBUNEwE/hqdefault.jpg",
+    youtubeId: "h_rDW2xDMQM",
+    thumbnailUrl: "https://img.youtube.com/vi/h_rDW2xDMQM/hqdefault.jpg",
     year: "2024" 
   },
   { 
