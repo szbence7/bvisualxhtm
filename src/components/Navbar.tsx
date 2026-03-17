@@ -15,6 +15,7 @@ const Navbar = () => {
     { label: "Kezdőlap", href: "#home" },
     { label: "Szolgáltatások", href: "#services" },
     { label: "Portfólió", href: "#portfolio-work" },
+    { label: "Videoklipek", href: "#videoklipek" },
     { label: "Rólunk", href: "#about" },
     { label: "Kapcsolat", href: "#contact" },
   ];
