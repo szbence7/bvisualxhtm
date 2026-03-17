@@ -10,63 +10,105 @@ const projects = [
     category: "Podcast", 
     youtubeId: "XA_eayulQ5Y",
     thumbnailUrl: "https://img.youtube.com/vi/XA_eayulQ5Y/hqdefault.jpg",
-    year: "2024" 
+    year: "2025" 
   },
   { 
     title: "Podcast 2", 
     category: "Podcast", 
     youtubeId: "hQe3OEn_ggk",
     thumbnailUrl: "https://img.youtube.com/vi/hQe3OEn_ggk/hqdefault.jpg",
-    year: "2024" 
+    year: "2025" 
   },
   { 
     title: "Magazin műsor 1", 
     category: "Magazin műsor", 
     youtubeId: "aCZH0ZmEs-4",
     thumbnailUrl: "https://img.youtube.com/vi/aCZH0ZmEs-4/hqdefault.jpg",
-    year: "2024" 
+    year: "2025" 
   },
   { 
     title: "Magazin műsor 2", 
     category: "Magazin műsor", 
     youtubeId: "mHQLBMlmrJY",
     thumbnailUrl: "https://img.youtube.com/vi/mHQLBMlmrJY/hqdefault.jpg",
-    year: "2024" 
+    year: "2025" 
   },
   { 
     title: "Magazin műsor 3", 
     category: "Magazin műsor", 
     youtubeId: "H7CWSmaSO4E",
     thumbnailUrl: "https://img.youtube.com/vi/H7CWSmaSO4E/hqdefault.jpg",
-    year: "2024" 
+    year: "2025" 
   },
   { 
     title: "Cégbemutató 1", 
     category: "Cégbemutató", 
     youtubeId: "h_rDW2xDMQM",
     thumbnailUrl: "https://img.youtube.com/vi/h_rDW2xDMQM/hqdefault.jpg",
-    year: "2024" 
+    year: "2025" 
   },
   { 
     title: "Cégbemutató 2", 
     category: "Cégbemutató", 
     youtubeId: "FjRzF9btZP8",
     thumbnailUrl: "https://img.youtube.com/vi/FjRzF9btZP8/hqdefault.jpg",
-    year: "2024" 
+    year: "2025" 
   },
   { 
     title: "Cégbemutató 3", 
     category: "Cégbemutató", 
     youtubeId: "OcouXI1sW1g",
     thumbnailUrl: "https://img.youtube.com/vi/OcouXI1sW1g/hqdefault.jpg",
-    year: "2024" 
+    year: "2025" 
+  },
+  { 
+    title: "Cégbemutató 4", 
+    category: "Cégbemutató", 
+    youtubeId: "Sj3F4cid_-8",
+    thumbnailUrl: "https://img.youtube.com/vi/Sj3F4cid_-8/hqdefault.jpg",
+    year: "2026" 
+  },
+  { 
+    title: "Cégbemutató 5", 
+    category: "Cégbemutató", 
+    youtubeId: "M0XU5YjVRF0",
+    thumbnailUrl: "https://img.youtube.com/vi/M0XU5YjVRF0/hqdefault.jpg",
+    year: "2026" 
+  },
+  { 
+    title: "Cégbemutató 6", 
+    category: "Cégbemutató", 
+    youtubeId: "wV6shpow55k",
+    thumbnailUrl: "https://img.youtube.com/vi/wV6shpow55k/hqdefault.jpg",
+    year: "2026" 
+  },
+  { 
+    title: "Cégbemutató 7", 
+    category: "Cégbemutató", 
+    youtubeId: "SDMcMu7EUn0",
+    thumbnailUrl: "https://img.youtube.com/vi/SDMcMu7EUn0/hqdefault.jpg",
+    year: "2026" 
+  },
+  { 
+    title: "Magazin műsor 4", 
+    category: "Magazin műsor", 
+    youtubeId: "3VRdl8c-Sks",
+    thumbnailUrl: "https://img.youtube.com/vi/3VRdl8c-Sks/hqdefault.jpg",
+    year: "2026" 
+  },
+  { 
+    title: "Magazin műsor 5", 
+    category: "Magazin műsor", 
+    youtubeId: "ssnDBuKw1ww",
+    thumbnailUrl: "https://img.youtube.com/vi/ssnDBuKw1ww/hqdefault.jpg",
+    year: "2026" 
   },
   { 
     title: "Egyéb", 
     category: "Egyéb", 
     youtubeId: "6UGemqIXHYY",
     thumbnailUrl: "https://img.youtube.com/vi/6UGemqIXHYY/hqdefault.jpg",
-    year: "2024" 
+    year: "2025" 
   },
 ];
 

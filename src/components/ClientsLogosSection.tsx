@@ -24,13 +24,13 @@ const ClientsLogosSection = () => {
           className="text-xs tracking-[0.4em] uppercase mb-4"
           style={{ color: "hsl(4 75% 55%)", fontFamily: "'Barlow', sans-serif" }}
         >
-          Partnereink
+          
         </p>
         <h2
           className="text-4xl md:text-6xl font-black uppercase text-white mb-12"
           style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
         >
-          Ők is Minket Választottak
+          
         </h2>
 
         <div className="flex flex-wrap justify-center items-center gap-10 md:gap-14 lg:gap-20">
