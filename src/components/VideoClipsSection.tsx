@@ -3,11 +3,17 @@ import { type CarouselApi, Carousel, CarouselContent, CarouselItem, CarouselNext
 
 type VideoClip = {
   youtubeId: string;
+  title: string;
 };
 
 const videoClips: VideoClip[] = [
   {
     youtubeId: "7DsmlLveeC8",
+    title: "Videoklip 1",
+  },
+  {
+    youtubeId: "k5iQSWw__m4",
+    title: "Videoklip 2",
   },
 ];
 
@@ -30,9 +36,9 @@ const VideoClipsSection = () => {
   }, [api]);
 
   return (
-    <section id="videoklipek" className="py-24" style={{ background: "hsl(0 0% 5%)" }}>
+    <section id="videoklipek" className="py-14" style={{ background: "hsl(0 0% 5%)" }}>
       <div className="max-w-7xl mx-auto px-6">
-        <div className="mb-14">
+        <div className="mb-8">
           <p
             className="text-xs tracking-[0.4em] uppercase mb-4"
             style={{ color: "hsl(4 75% 55%)", fontFamily: "'Barlow', sans-serif" }}
@@ -49,14 +55,14 @@ const VideoClipsSection = () => {
 
         <Carousel
           opts={{ align: "center", containScroll: "trimSnaps" }}
-          className="w-full max-w-6xl mx-auto"
+          className="w-full max-w-4xl mx-auto"
           setApi={setApi}
         >
           <CarouselContent>
             {videoClips.map((clip) => (
               <CarouselItem key={clip.youtubeId} className="basis-full">
                 <div className="w-full flex justify-center">
-                  <div className="w-full max-w-5xl overflow-hidden rounded-2xl border" style={{ borderColor: "hsl(0 0% 18%)" }}>
+                  <div className="w-full max-w-3xl overflow-hidden rounded-2xl border" style={{ borderColor: "hsl(0 0% 18%)" }}>
                     <div className="relative w-full" style={{ paddingTop: "56.25%" }}>
                       <iframe
                         className="absolute inset-0 w-full h-full"
@@ -105,7 +111,7 @@ const VideoClipsSection = () => {
                   style={{
                     borderColor: isActive ? "hsl(4 75% 42%)" : "hsl(0 0% 18%)",
                     background: "hsl(0 0% 10%)",
-                    width: 120,
+                    width: 96,
                     aspectRatio: "16/9",
                     opacity: isActive ? 1 : 0.7,
                   }}

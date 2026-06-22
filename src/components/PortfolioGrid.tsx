@@ -1,7 +1,7 @@
 import heroMusic from "@/assets/hero-music.jpg";
 import heroCamera from "@/assets/hero-camera.jpg";
 import heroPodcast from "@/assets/hero-podcast.jpg";
-import heroStorytelling from "@/assets/hero-storytelling.jpg";
+import heroGastronomy from "@/assets/hero-gastronomy.jpg";
 
 const PortfolioGrid = () => {
   return (
@@ -26,8 +26,8 @@ const PortfolioGrid = () => {
       {/* Wide storytelling section */}
       <div className="relative mt-1 mx-1 overflow-hidden" style={{ height: "480px" }}>
         <img
-          src={heroStorytelling}
-          alt="Creative Visual Storytelling"
+          src={heroGastronomy}
+          alt="Gasztronómiai videógyártás"
           className="w-full h-full object-cover"
         />
         <div
@@ -43,12 +43,12 @@ const PortfolioGrid = () => {
               className="text-5xl md:text-6xl font-black text-white uppercase leading-tight mb-4"
               style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
             >
-              Kreatív vizuális
+              Turbózd fel
               <br />
-              történetmesélés
+              a média jelenléted
             </h2>
             <p className="text-base leading-relaxed" style={{ color: "hsl(0 0% 75%)", fontFamily: "'Barlow', sans-serif" }}>
-              Átlépni a képernyő korlátain és olyan vizuális élményt nyújtani, ami megragad.
+              Mert a legjobb fogás az, amit látni is érdemes.
             </p>
           </div>
         </div>
